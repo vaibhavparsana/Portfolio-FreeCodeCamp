@@ -1,0 +1,107 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: white;
+    }
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "project-1 project-2" "project-3 project-4";
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    padding: 20px 0px;
+}
+
+.project-1,
+.project-2,
+.project-3,
+.project-4 {
+    text-align: center;
+}
+
+.project-1 {
+    grid-area: project-1;
+}
+
+.project-2 {
+    grid-area: project-2;
+}
+
+.project-3 {
+    grid-area: project-3;
+}
+
+.project-4 {
+    grid-area: project-4;
+}
+
+.sections {
+    position: relative;
+    top: 50px;
+}
+
+.project-1>a,
+.project-2>a,
+.project-3>a,
+.project-4>a {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px;
+}
